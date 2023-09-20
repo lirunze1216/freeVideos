@@ -41,10 +41,7 @@
     <!--搜索栏-->
     <div class="search">
       <input type="text" id="text" />
-      <button type="button" onclick="input_parse1()">线路一</button>
-      <button type="button" onclick="input_parse2()">线路二</button>
-      <button type="button" onclick="input_parse3()">线路三</button>
-      <button type="button" onclick="input_parse4()">线路四</button>
+      <button type="button" onclick="input_parse()">播放</button>
       <button type="button" onclick="reset()">清空</button>
     </div>
 
@@ -53,17 +50,16 @@
 
     <script>
       /*
-       * https://svip.bljiex.cc/?v=
-       * https://www.playm3u8.cn/jiexi.php?url=
-       * https://im1907.top/?jx=
+       *  https://svip.bljiex.cc/?v=
+       *  https://jx.iztyy.com/svip/?url=
        * https://svip.bljiex.cc/?v=https://v.qq.com/x/cover/mzc00200anaf7zc/u0046afagkt.html
        * */
       // 接口
-      let parse_url1 = 'https://jx.m3u8.tv/jiexi/?url='
-      let parse_url2 = 'https://svip.bljiex.cc/?v='
-      let parse_url3 = 'https://www.playm3u8.cn/jiexi.php?url='
-      let parse_url4 = 'https://im1907.top/?jx='
-
+      // let parse_url = 'https://svip.bljiex.cc/?v='
+      let parse_url = 'https://jx.m3u8.tv/jiexi/?url='
+      // let parse_url = 'https://svip.bljiex.cc/?v='
+      // let parse_url2 = 'https://www.playm3u8.cn/jiexi.php?url='
+      // let parse_url3 = 'https://im1907.top/?jx='
       // 获取输入框对象
       let input = document.getElementById('text')
       // 获取iframe对象
@@ -75,25 +71,8 @@
       }
 
       // 当点击播放时
-      function input_parse1() {
-        let url = parse_url1 + input.value
-        // 播放视频
-        play(url)
-      }
-
-      function input_parse2() {
-        let url = parse_url2 + input.value
-        // 播放视频
-        play(url)
-      }
-
-      function input_parse3() {
-        let url = parse_url3 + input.value
-        // 播放视频
-        play(url)
-      }
-      function input_parse4() {
-        let url = parse_url4 + input.value
+      function input_parse() {
+        let url = parse_url + input.value
         // 播放视频
         play(url)
       }
