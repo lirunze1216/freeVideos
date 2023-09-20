@@ -115,29 +115,31 @@
         }
       })
 
-      // 通过地址栏解析
-      // 提取?后面的url的值，并进行解析动作,如果不存在，则不进行解析
-      // 获取网址的url
-      let tmp = location.search
-      // 提取url=后面的网址
-      let href = tmp.substr(tmp.indexOf('?'))
-      let reg = 'url=([^&]*)'
-      let url = href.match(reg)[0]
-      if (url !== null && url.length > 4) {
-        url = url.substr(url.indexOf('url=') + 4)
-        // 解析该网址
-        location_parse(url)
-      }
+      // // 通过地址栏解析
+      // // 提取?后面的url的值，并进行解析动作,如果不存在，则不进行解析
+      // // 获取网址的url
+      // let tmp = location.search
+      // console.log(tmp)
+      // // 提取url=后面的网址
+      // let href = tmp.substr(tmp.indexOf('?'))
+      // let reg = 'url=([^&]*)'
+      // console.log(href.match())
+      // let url = href.match(reg)[0]
+      // if (url !== null && url.length > 4) {
+      //   url = url.substr(url.indexOf('url=') + 4)
+      //   // 解析该网址
+      //   location_parse(url)
+      // }
 
-      // 进行url的解析
-      function location_parse(url) {
-        // 拼接成合适的url
-        let tmp = parse_url + url
-        // 播放视频
-        play(tmp)
-        // 把url填入搜索栏中
-        input.value = url
-      }
+      // // 进行url的解析
+      // function location_parse(url) {
+      //   // 拼接成合适的url
+      //   let tmp = parse_url + url
+      //   // 播放视频
+      //   play(tmp)
+      //   // 把url填入搜索栏中
+      //   input.value = url
+      // }
     </script>
   </body>
 </html>
